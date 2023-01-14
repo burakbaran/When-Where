@@ -2,33 +2,32 @@ import Container from "react-bootstrap/Container";
 import {Button, Card, Col, Row} from "react-bootstrap";
 import React from "react";
 import {MainLayoutProps} from "./MainLayout.types";
+import "./MainLayout.styles.css";
+import {cardPriorityConverter} from "../utils/card-priority-converter";
 
 
 const MainLayout = ({
                         cardList
                     }: MainLayoutProps) => {
-    const list = () => {
-        const a = [];
-        for (let i = 0; i < 100; i++) {
-            a.push(i);
-        }
-        return a;
-    };
 
     return (
         <Container>
             <Row className="show-grid">
-                {list().map((item) => {
+                {cardList.map((item) => {
                     return (
-                        <Col xs="auto" style={{justifyContent: "flex-start", display: "flex", marginTop: "1rem" }}>
-                            <Card style={{ width: '18rem' }}>
+                        <Col xs="auto" style={{justifyContent: "flex-start", display: "flex", marginTop: "1rem"}}>
+                            <Card key={item.id} className="card"
+                            border="dark"
+                            bg={cardPriorityConverter(item.priority)}
+                            text="white"
+                            >
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Title>{item.label}</Card.Title>
                                     <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
+                                        {item.detail}
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    {/*TODO: open new modal for details*/}
+                                    <Button variant="primary">Görüntüle</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

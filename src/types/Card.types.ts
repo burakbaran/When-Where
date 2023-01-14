@@ -1,8 +1,15 @@
 
 export interface Card {
+    id: number;
     createDate: Date;
-    doneDate: Date;
+    doneDate?: Date;
     label: string;
-    priority: "URGENT" | "MID" | "LOW";
+    priority: string; // "URGENT" | "MID" | "LOW"
     detail: string;
+}
+
+export enum CardBackground{
+    SUCCESS = "success",
+    DANGER= "danger",
+    WARNING= "warning"
 }
