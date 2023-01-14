@@ -4,6 +4,7 @@ import React from "react";
 import {MainLayoutProps} from "./MainLayout.types";
 import "./MainLayout.styles.css";
 import {cardPriorityConverter} from "../utils/card-priority-converter";
+import CardTitle from "../CardTitle/CardTitle";
 
 
 const MainLayout = ({
@@ -22,7 +23,7 @@ const MainLayout = ({
                       text="light"
                 >
                   <Card.Body>
-                    <Card.Title>{item.label}</Card.Title>
+                    <Card.Title><CardTitle item={item}/></Card.Title>
                     <Card.Text>
                       {item.detail}
                     </Card.Text>
