@@ -18,7 +18,6 @@ const CardTitle = ({item}: any) => {
           </Badge>
         </Col>
       </Row>
-
     </Container>
   )
 }
