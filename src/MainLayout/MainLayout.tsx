@@ -17,9 +17,9 @@ const MainLayout = ({
             return (
               <Col xs="auto" style={{justifyContent: "flex-start", display: "flex", marginTop: "1rem"}}>
                 <Card key={item.id} className="card"
-                      border="dark"
-                      bg={cardPriorityConverter(item.priority)}
-                      text="white"
+                      border={cardPriorityConverter(item.priority)}
+                      bg="dark"
+                      text="light"
                 >
                   <Card.Body>
                     <Card.Title>{item.label}</Card.Title>
@@ -27,7 +27,7 @@ const MainLayout = ({
                       {item.detail}
                     </Card.Text>
                     {/*TODO: open new modal for details*/}
-                    <Button variant="dark">Görüntüle</Button>
+                    <Button variant="primary">Görüntüle</Button>
                   </Card.Body>
                 </Card>
               </Col>

@@ -1,10 +1,7 @@
-
-
-
 .card {
     width: 18rem;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 black;
+    box-shadow: 0 8px 24px 0 white;
 }
