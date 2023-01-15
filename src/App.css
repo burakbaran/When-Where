@@ -1,7 +1,7 @@
 .App {
   background: linear-gradient(90deg, #d2001a, #7462ff, #f48e21, #23d5ab);
   background-size: 300% 300%;
-  animation: color 16s ease-in-out infinite;
+  animation: color 60s ease-in-out infinite;
 }
 
 @keyframes color {
